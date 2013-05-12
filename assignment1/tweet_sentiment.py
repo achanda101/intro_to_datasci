@@ -21,10 +21,9 @@ def hw(sent_fp, tweet_fp):
     			tweet_word = tweet_word.lower()
     			if scores.has_key(tweet_word):
     				this_tweet_sent += scores[tweet_word]
-    		print tweettext
-    		print "sentiment: " + str(this_tweet_sent)
+    		print this_tweet_sent
     	else:
-    		print "sentiment: 0"
+    		print 0
 
 def lines(fp):
     print str(len(fp.readlines()))
@@ -35,8 +34,8 @@ def main():
 	hw(sent_file, tweet_file)
 	sent_file.seek(0) # reset the filepointer to the beginning of the file
 	tweet_file.seek(0)
-	lines(sent_file)
-	lines(tweet_file)
+	# lines(sent_file)
+	# lines(tweet_file)
 	sent_file.close()
 	tweet_file.close()
                                   
